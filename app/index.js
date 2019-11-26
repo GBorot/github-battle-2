@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { ThemeProvider } from "./contexts/theme";
 import Nav from "./components/Nav";
-import Loading from "./components/Loading";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Loading from "./components/Loading";
 
 const Popular = React.lazy(() => import("./components/Popular"));
 const Battle = React.lazy(() => import("./components/Battle"));
@@ -19,7 +19,6 @@ class App extends React.Component {
       }));
     }
   };
-
   render() {
     return (
       <Router>
@@ -44,9 +43,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(
-  // React element
-  <App />,
-  // Where to render the element to
-  document.getElementById("app")
-);
+ReactDOM.render(<App />, document.getElementById("app"));
