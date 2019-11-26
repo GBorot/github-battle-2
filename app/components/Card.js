@@ -29,7 +29,7 @@ export default function Card({
   );
 }
 
-Card.prototype = {
+Card.propTypes = {
   header: PropTypes.string.isRequired,
   subheader: PropTypes.string,
   avatar: PropTypes.string.isRequired,

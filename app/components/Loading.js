@@ -13,10 +13,7 @@ const styles = {
 };
 
 export default class Loading extends React.Component {
-  state = {
-    content: this.props.text
-  };
-
+  state = { content: this.props.text };
   componentDidMount() {
     const { speed, text } = this.props;
 

@@ -6,7 +6,6 @@ import {
   FaTimesCircle
 } from "react-icons/fa";
 import PropTypes from "prop-types";
-import Results from "./Results";
 import { ThemeConsumer } from "../contexts/theme";
 import { Link } from "react-router-dom";
 
@@ -81,7 +80,7 @@ class PlayerInput extends React.Component {
                 onChange={this.handleChange}
               />
               <button
-                className={`btn ${theme === "dark" ? "light-btn" : "dark-btn"}`}
+                className={`btn ${theme === "dark" ? "btn-light" : "btn-dark"}`}
                 type="submit"
                 disabled={!this.state.username}
               >
@@ -187,7 +186,7 @@ export default class Battle extends React.Component {
 
           {playerOne && playerTwo && (
             <Link
-              className="btn dark-btn btn-space"
+              className="btn btn-dark btn-space"
               to={{
                 pathname: "/battle/results",
                 search: `?playerOne=${playerOne}&playerTwo=${playerTwo}`
